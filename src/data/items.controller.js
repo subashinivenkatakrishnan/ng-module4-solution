@@ -4,7 +4,6 @@
 angular.module('Data')
 .controller('ItemsController', ItemsController);
 
-// 'item' is injected through state's resolve
 ItemsController.$inject = ['menuItems']
 function ItemsController(menuItems) {
   var itemDetail = this;
