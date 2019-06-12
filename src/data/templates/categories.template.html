@@ -1,9 +1,9 @@
-<a ui-sref="home">Home</a> &lt; <span>List</span>
+<a ui-sref="home">Home</a> &lt; <span>Categories</span>
 
 <h3>Categories list</h3>
 <ul>
-  <li ng-repeat="item in categoriesList.items">
-      <!-- ui-sref="itemDetail({itemId: $index})"> -->
-    {{ item }}
+  <li ng-repeat="item in categoriesList.items"
+      ui-sref="items({itemShortName: item.shortName})">
+    ({{ item.shortName }}) {{item.name}}
   </li>
 </ul>

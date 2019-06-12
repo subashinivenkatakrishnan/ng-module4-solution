@@ -8,8 +8,11 @@ angular.module('Data')
 CategoriesController.$inject = ['items'];
 function CategoriesController(items) {
   var categoriesList = this;
-  categoriesList.items = items.data.map(item => item.name);
-  console.log('items', categoriesList.items)
+  categoriesList.items = items.map((item) => {
+    return {
+      name: item.name,
+      shortName: item.short_name
+    }
+  });
 }
-
 })();
